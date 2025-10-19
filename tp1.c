@@ -1,10 +1,10 @@
 #include<stdio.h>
 int main(){
-  int Mat[4][4],i,j,n;
+  int Mat[n][n],i,j,n;
 printf("Enter the elements of the MAT:/")
   {
-for(i=0;i<4;i++)
-{ for(j=0;j<4;j++)
-  scanf("%d",&Mat[4][4]);
+    for(i=0;i<n;i++)
+          {   for(j=0;j<n;j++)
+  scanf("%d",&Mat[n][n]);
 }
 }
