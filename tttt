@@ -1,1 +1,53 @@
-fvfvfv
+#include <stdio.h>
+
+
+int add(int a, int b) {
+    return a + b;
+}
+
+
+int max(int a, int b) {
+    if (a > b)
+        return a;
+    else
+        return b;
+}
+float average(int arr[], int n) {
+    int sum = 0;
+    for (int i = 0; i < n; i++) {
+        sum = sum + arr[i];
+    }
+    return (float)sum / n;
+}
+
+int main() {
+    int n;
+
+    printf("أدخل عدد العناصر: ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    printf("أدخل %d عددًا:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+
+    int largest = arr[0];
+    for (int i = 1; i < n; i++) {
+        largest = max(largest, arr[i]);
+    }
+
+ 
+    float mean = average(arr, n);
+
+
+    int sum_example = add(arr[0], arr[1]);
+
+    printf("\nأكبر عدد هو: %d\n", largest);
+    printf("المتوسط الحسابي هو: %.2f\n", mean);
+    printf("مثال على استخدام الدالة add: %d + %d = %d\n", arr[0], arr[1], sum_example);
+
+    return 0;
+}
